@@ -1,17 +1,34 @@
 #include <stdio.h>
 
-int main() {
-    int n,i,a=0,b=1,c;
-    printf("Enter the number of terms: ");
+int main()
+{
+    int a[100], n, i, j, max, min;
+
+    printf("Enter the value of n (max 100):\n");
     scanf("%d", &n);
-    
-    // Display multiplication table
-    printf("%d\n%d\n",a,b);
-        for (i = 1; i <= n; i++) {
-            printf("%d\n",c);
-            c=a+b;
-            a=b;
-            b=c;
+
+    printf("Start entering numbers:\n");
+    for(i = 0; i < n; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+
+    min = a[0];
+    max = a[0];
+    for(i = 0; i < n; i++)
+    {
+        if(a[i] < min)
+        {
+            min = a[i];
         }
+        if(a[i] > max)
+        {
+            max = a[i];
+        }
+    }
+
+    printf("%d is min\n", min);
+    printf("%d is max\n", max);
+
     return 0;
 }
