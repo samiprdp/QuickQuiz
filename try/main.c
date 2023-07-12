@@ -2,33 +2,20 @@
 
 int main()
 {
-    int a[100], n, i, j, max, min;
-
-    printf("Enter the value of n (max 100):\n");
-    scanf("%d", &n);
-
-    printf("Start entering numbers:\n");
-    for(i = 0; i < n; i++)
-    {
-        scanf("%d", &a[i]);
-    }
-
-    min = a[0];
-    max = a[0];
-    for(i = 0; i < n; i++)
-    {
-        if(a[i] < min)
-        {
-            min = a[i];
-        }
-        if(a[i] > max)
-        {
-            max = a[i];
-        }
-    }
-
-    printf("%d is min\n", min);
-    printf("%d is max\n", max);
-
-    return 0;
+int a[2][3],i,j;
+printf("Enter the matrix elements:\n");
+for(i=0;i<2;i++){
+for(j=0;j<3;j++){
+scanf("%d",&a[i][j]);
+}
+}
+//transposed
+printf("Printing\n");
+for (i=0;i<3;i++)
+{
+for(j=0;j<2;j++){
+printf("%d\t",a[j][i]);
+}
+printf("\n");
+}
 }
