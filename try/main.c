@@ -1,17 +1,17 @@
 #include <stdio.h>
 
 int main() {
-    int n, j,i;
-    printf("Enter the number ");
-    scanf("%d",&i);
+    int n,i,a=0,b=1,c;
     printf("Enter the number of terms: ");
     scanf("%d", &n);
     
     // Display multiplication table
-
-        for (j = 1; j <= n; j++) {
-            printf("%d x %d = %d\n", i, j, i*j);
+    printf("%d\n%d\n",a,b);
+        for (i = 1; i <= n; i++) {
+            printf("%d\n",c);
+            c=a+b;
+            a=b;
+            b=c;
         }
-        printf("\n");
     return 0;
 }
