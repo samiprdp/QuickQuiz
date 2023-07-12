@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>New Home by Austin Sage</title>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/plyr@3.3.2/dist/plyr.min.js"></script>
+</head>
+<body>
+  <div class="plyr">
+    <audio src="https://www.youtube.com/shorts/60x6rhknub4"></audio>
+  </div>
+</body>
+<script>
+    $(document).ready(function() {
+  $('.plyr').plyr({
+    controls: ['play', 'pause', 'stop', 'prev', 'next', 'volume', 'progress'],
+  });
+});
+</script>
+</html>
