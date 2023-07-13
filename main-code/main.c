@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "login.h"
+#include "./login.h"
 
 void login(char[], char[]);
-int program(char []);
 void fail_login();
 int main()
 {
@@ -26,18 +25,13 @@ void login(char pass[], char name[])
     if (strcmp(name, username) == 0 && strcmp(pass, password) == 0)
     {
         system("clear");
-        program(name);
+        login_success(name);
     }
     else
     {
         system("clear");
         fail_login();
     }
-}
-int program(char name[])
-{
-    login_sucess(name);
-    return 0;
 }
 void fail_login()
 {
