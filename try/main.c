@@ -10,9 +10,7 @@ int main()
         printf("Not allowed\n");
         return 0;
     }
-
     answer = number & 1;
-
     if (answer == 0)
     {
         printf("Even\n");
