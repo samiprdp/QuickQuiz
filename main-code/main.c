@@ -25,7 +25,7 @@ void logic(char pass[], char name[])
     if (strcmp(name, username) == 0 && strcmp(pass, password) == 0)
     {
         system("clear");
-        program();
+        program(name);
     }
     else
     {
@@ -33,9 +33,9 @@ void logic(char pass[], char name[])
         fail_login();
     }
 }
-int program()
+int program(char name[])
 {
-    login();
+    login(name);
     return 0;
 }
 void fail_login()
