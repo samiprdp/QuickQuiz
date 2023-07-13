@@ -2,8 +2,9 @@
 #include <string.h>
 #include <stdlib.h>
 #include "login.h"
-void logic(char[], char[]);
-int program();
+
+void login(char[], char[]);
+int program(char []);
 void fail_login();
 int main()
 {
@@ -12,10 +13,10 @@ int main()
     scanf("%s", name);
     printf("create a password: ");
     scanf("%s", pass);
-    logic(pass, name);
+    login(pass, name);
     return 0;
 }
-void logic(char pass[], char name[])
+void login(char pass[], char name[])
 {
     char username[100], password[100];
     printf("Enter your username: ");
@@ -35,7 +36,7 @@ void logic(char pass[], char name[])
 }
 int program(char name[])
 {
-    login(name);
+    login_sucess(name);
     return 0;
 }
 void fail_login()
