@@ -2,9 +2,11 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <termios.h>
+#include "./login.h"
 
 void starting_logic();
-void login_success()
+
+void login_success(char username[])
 {
     struct termios term, old_term;
     tcgetattr(STDIN_FILENO, &term);
@@ -15,13 +17,12 @@ void login_success()
     printf("Login successful!");
     fflush(stdout);
     sleep(2);
-    printf("\rWelcome to Institution\n");
+    printf("\rWelcome to Institution %s\n ", username);
     fflush(stdout);
     sleep(2);
     tcsetattr(STDIN_FILENO, TCSANOW, &old_term); // Restore original terminal settings    
     starting_logic();    
     tcsetattr(STDIN_FILENO, TCSANOW, &old_term); // Restore original terminal settings
-
 }
 
 void starting_logic()
@@ -40,5 +41,4 @@ void starting_logic()
     scanf("%s", try);
     printf("%s\n", try);
     fflush(stdout);
-    
 }

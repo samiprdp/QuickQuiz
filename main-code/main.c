@@ -107,7 +107,7 @@ void login(struct Account accounts[], int numAccounts)
         if (strcmp(username, accounts[i].username) == 0 && strcmp(password, accounts[i].password) == 0)
         {
             system("clear");
-            login_success();
+            login_success(username);
             return;
         }
     }
