@@ -45,8 +45,8 @@ int main()
     switch (choose)
     {
         case 1:
-            create(accounts, numAccounts);
-            numAccounts++;
+            numAccounts = create(accounts, numAccounts);
+            login(accounts, numAccounts);
             break;
         case 2:
             login(accounts, numAccounts);
@@ -81,14 +81,15 @@ int create(struct Account accounts[], int numAccounts)
 
         strcpy(accounts[numAccounts].username, name);
         strcpy(accounts[numAccounts].password, pass);
+        numAccounts++;
     }
     else
     {
         printf("Error opening the file.\n");
-        return -1; // Return an error code to indicate failure
+        return numAccounts; // Return the existing number of accounts
     }
 
-    return 0;
+    return numAccounts; // Return the updated number of accounts
 }
 
 void login(struct Account accounts[], int numAccounts)
