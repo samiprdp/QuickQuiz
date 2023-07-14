@@ -4,7 +4,7 @@
 #include <termios.h>
 
 void starting_logic();
-void login_success(char username[])
+void login_success()
 {
     struct termios term, old_term;
     tcgetattr(STDIN_FILENO, &term);
@@ -15,7 +15,7 @@ void login_success(char username[])
     printf("Login successful!");
     fflush(stdout);
     sleep(2);
-    printf("\rWelcome to Institution %s\n", username);
+    printf("\rWelcome to Institution\n");
     fflush(stdout);
     sleep(2);
     tcsetattr(STDIN_FILENO, TCSANOW, &old_term); // Restore original terminal settings    
